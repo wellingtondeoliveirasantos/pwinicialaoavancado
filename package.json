@@ -1,0 +1,27 @@
+{
+  "name": "pwinicialaoavancado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "DataDrivenTesting": "npx playwright test --grep @DataDrivenTesting",
+    "Suite": "npx playwright test --grep \"@SmokeTesting|@RegressionTesting\"",
+    "SmokeTesting": "npx playwright test --grep @SmokeTesting",
+    "RegressionTesting": "npx playwright test --grep @RegressionTesting",
+    "test": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^24.3.0",
+    "allure-playwright": "^3.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "dotenv": "^17.2.1"
+  }
+}
