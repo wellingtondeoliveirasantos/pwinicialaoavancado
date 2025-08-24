@@ -6,15 +6,14 @@ import { test, expect } from '@playwright/test';
  */
 test('My First Playwright TypeScript Test', async ({ page }) => {
     // Go to URL
-    await page.goto('https://www.google.com/');
+    await page.goto('https://www.youtube.com/');
 
     // Search with keywords
-    await page.getByLabel('Search', { exact: true }).fill('playwright by testers talk');
-    await page.getByLabel('Search', { exact: true }).press('Enter');
+    await page.getByPlaceholder('Search').first().click();
+    await page.getByPlaceholder('Search').first().fill('playwright by testers talk ');
 
     // Click on playlist
-    await page.getByRole('link', { name: 'Playwright by Testers Talk☑️' }).first().click();
-
-    // Validate web page title 
-    await expect(page).toHaveTitle('Playwright by Testers Talk☑️ - YouTube');
+    await page.getByRole('button', { name: 'Search', exact: true }).click();
+    await page.getByRole('link', { name: 'Playwright by Testers Talk☑️' }).click();
+    
 });

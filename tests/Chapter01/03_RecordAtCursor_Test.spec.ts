@@ -9,8 +9,8 @@ test('Record at cursor test', async ({ page }) => {
     await page.goto('https://www.google.com/');
 
     // Search with keywords
-    await page.getByLabel('Search', { exact: true }).fill('playwright by testers talk');
-    await page.getByLabel('Search', { exact: true }).press('Enter');
+    await page.getByLabel('Pesquisar', { exact: true }).fill('playwright by testers talk');
+    await page.getByLabel('Pesquisar', { exact: true }).press('Enter');
 
     // Click on playlist
     await page.getByRole('link', { name: 'Playwright by Testers Talk☑️' }).first().click();

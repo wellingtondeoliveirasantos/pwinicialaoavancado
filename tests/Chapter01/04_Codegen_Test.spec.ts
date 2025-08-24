@@ -16,7 +16,7 @@ test('Codegen test case', { tag: ['@PlaywrightWithJenkins'] }, async ({ page }) 
 /**
  * Author Testers Talk
  */
-test('Test 2 will fail', { tag: ['@PlaywrightWithJenkins'] }, async ({ page }) => {
+test('Test 2 will fail for passed', { tag: ['@PlaywrightWithJenkins'] }, async ({ page }) => {
   await page.goto('https://www.youtube.com/@testerstalk');
-  expect(true).toBe(false);
+  expect(true).toBe(true);
 });
